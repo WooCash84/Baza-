@@ -67,17 +67,5 @@ public class Connect {
         res.close();
     }
  */
-    public static void main(String[] args){
-        try{
-        String query = "select * from dziekanat.studenci";
-        Connect connect = new Connect();
-        Connection con = connect.getConnection();
-        Statement stmt = con.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
-        ResultSetMetaData rsmd = rs.getMetaData();
-        System.out.println(rs.getString(query));
-        }catch(SQLException e){
-            System.out.println("Błąd bazy");
-        }
-        }
+  
 }
